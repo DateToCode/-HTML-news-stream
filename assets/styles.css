@@ -1,0 +1,145 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+.container {
+  margin: auto;
+  max-width: 1200px;
+}
+
+/* NAVBAR SECTION */
+
+header {
+  background-color: #d1d1d1;
+}
+
+.nav {
+  display: flex;
+  align-items: center;
+  flex-wrap: nowrap;
+  height: 80px;
+}
+
+.nav__list {
+  display: none;
+}
+
+.nav__item:not(:first-child) {
+  margin-left: 16px;
+}
+
+.nav__search {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex: 1;
+}
+
+.nav__search input {
+  border: 0;
+  height: 32px;
+  padding: 8px 32px;
+  border-radius: 12px;
+  outline: none;
+}
+
+.nav__search button {
+  margin-left: 16px;
+  border: 0;
+  background-color: #2b94f7;
+  height: 32px;
+  padding: 8px 10px;
+  border-radius: 12px;
+  cursor: pointer;
+  color: #fff;
+  outline: none;
+}
+
+/* END NAVBAR SECTION */
+
+/* NEWS SECTION */
+
+#news {
+  margin-top: 80px;
+  padding: 0 24px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+
+/* ARTICLE SECTION */
+
+.news__article {
+  min-height: 400px;
+  background-color: #d3d3d3;
+  border-radius: 16px;
+  display: flex;
+  flex-direction: column;
+  margin: 32px 0;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
+}
+
+.news__article a {
+  text-decoration: none;
+}
+
+.news__article:hover img {
+  transform: scale(1.2);
+}
+
+.article__image {
+  max-height: 200px;
+  width: 100%;
+  overflow: hidden;
+  border-radius: 16px 16px 0 0;
+}
+
+.article__image img {
+  max-height: 200px;
+  width: 100%;
+  object-fit: cover;
+  border-radius: 16px 16px 0 0;
+  transition: all 0.2s ease;
+}
+
+.article__description {
+  padding: 16px 32px;
+  flex: 1;
+  color: #000;
+}
+
+.article__description hr {
+  margin: 8px 0;
+}
+
+.article__description p {
+  color: #353535;
+}
+
+@media (min-width: 968px) {
+  #news {
+    flex-flow: row wrap;
+    justify-content: space-between;
+  }
+  .nav__list {
+    display: flex;
+    align-items: center;
+    list-style: none;
+    flex: 1;
+  }
+
+  .nav__search {
+    justify-content: flex-end;
+  }
+
+  .news__article:first-child {
+    width: 100%;
+    margin: 16px 0;
+  }
+
+  .news__article:not(:first-child) {
+    width: calc(50% - 32px);
+  }
+}
